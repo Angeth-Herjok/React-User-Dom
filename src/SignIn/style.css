@@ -1,0 +1,12 @@
+.form{
+    width: 40%;
+    margin: 0 auto;
+    
+
+}
+.form > input{
+    padding: 10px 10px;
+    width: 70%;
+    border: solid 1px whitesmoke;
+    border-radius: 5px;
+}

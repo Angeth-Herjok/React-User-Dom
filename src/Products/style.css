@@ -1,0 +1,41 @@
+.products-list {
+    display: flex;
+    /* flex-direction: column; */
+    margin-left: 45%;
+    width: 60%;
+  }
+  
+  .product-item {
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    /* text-align: center; */
+    margin-left: 25%;
+    color: brown;
+    text-transform: uppercase;
+  }
+  
+  h3 {
+    margin-left: 25%;
+  }
+  
+  img {
+    width: 60%;
+  }
+  
+  
+  .login-button{
+        padding: 25px 56px;
+        border: none;
+        background-color: rgb(175, 231, 175);
+        border-radius: 5px;
+        color: #fff;
+        margin-left: 25%;
+        margin-bottom: 10px;
+}
+  
+  .all{
+    margin-left: 25%;
+    
+  }
