@@ -8,20 +8,8 @@ import ProductDetails from './ProductDetails';
 function App() {
   return (
     <div >
-      <Navigation/>
-      <BrowserRouter>
-      <Routes>
-        
-        <Route path='more' element={<Products/>}/>
-        <Route path='SignIn' element={<SignIn/>}/> 
-        {/* <Route index element={<SignIn/>}/> */}
-        
-      </Routes>
-      </BrowserRouter>
-      <Products/>
-      <SignIn/>
-      
-      
+   
+    <SignIn></SignIn>   
       
       
     </div>

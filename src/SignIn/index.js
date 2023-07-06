@@ -1,5 +1,8 @@
 import React,{useState} from "react";
 import "./style.css"
+import Navigation from "../Navigation";
+import { Link } from "react-router-dom";
+
 const SignIn =() =>{
     const [Email, setEmail] =useState('');
     const [Password, setPassword] =useState('');
@@ -8,6 +11,7 @@ const SignIn =() =>{
 
     return(
         <div>
+            <Navigation></Navigation>
             <form className="loginPage">
                 <h1>Login</h1>
                 <input placeholder="Enter Email" type="email" 
@@ -22,7 +26,7 @@ const SignIn =() =>{
                 </br>
                 <br>
                 </br>
-                <button className="login-button">Login</button>
+                <Link to={'/Products/'}><button type="submit" className="login-button">Login</button></Link>
             </form>
         </div>
     )

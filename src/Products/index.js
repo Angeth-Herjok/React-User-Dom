@@ -1,6 +1,8 @@
 import React, {useEffect,useState}  from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
+import Navigation from "../Navigation";
+
 const Products = ()=>{
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState([]);
@@ -27,21 +29,22 @@ const Products = ()=>{
     }
     return(
         <div >
-            
+            <Navigation></Navigation>
             <div className="all">
-            
-            
+
             {products.map(item=>(
                 <div key={item.id} className="images">
+                    <img src={item.thumbnail} className="img"></img>
                     <h3>{item.title}</h3>
                     <h3>${item.price}</h3>
-                    <img src={item.thumbnail} className="img"></img>
-                    <h3>{item.discountPercentage}%</h3>
                     
+                    <h3>{item.discountPercentage}%</h3>
+                    <button className="login-button1">View Details</button>
                 </div>
                 
             ))}
             </div>
+            <button className="viewmore">More Details</button>
         </div>
     )
 }
