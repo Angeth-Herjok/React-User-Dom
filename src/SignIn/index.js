@@ -14,8 +14,19 @@ const SignIn =() =>{
             <Navigation></Navigation>
             <form className="loginPage">
                 <h1>Login</h1>
-                <input placeholder="Enter Email" type="email" 
+                <label>UserName</label>
+                <br>
+                </br>
+                <br>
+                </br>
+
+                <input placeholder="Enter username" type="text" 
                 onChange={(a)=>{setEmail(a.target.value)}}></input>
+                <br>
+                </br>
+                <br>
+                </br>
+                <label>Password</label>
                 <br>
                 </br>
                 <br>

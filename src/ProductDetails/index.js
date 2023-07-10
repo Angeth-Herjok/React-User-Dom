@@ -1,51 +1,53 @@
-// import React, {useEffect,useState}  from "react";
-// import "./style.css";
+import React, {useEffect,useState}  from "react";
+import "./style.css";
+import { Link } from "react-router-dom";
+import Navigation from "../Navigation";
 
-// const ProductDetails = ()=>{
-//     const [products, setProducts] = useState([]);
-//     const [loading, setLoading] = useState([]);
-//     useEffect(()=>{
-//         (async()=>{
-//             await getProducts();
-//         })()
-//     },[])
-//     console.log({products});
-//     const getProducts = async () =>{
-//         try{
-//             setLoading(true)
-//             const response = await fetch('https://dummyjson.com/products/1')
-//             const result = await response.json();
-//             setProducts(result.products);
-//             setLoading(false);
-//         }
-//         catch(error){
-//             console.log(error.message);
-//         }
-//     }
-//     if(loading){
-//         return <h2>Loading...</h2>
-//     }
-//     return(
-//         <div className="all">
-//             <h2>Products Details</h2>
-            
-//             {products.map(item=>(
-//                 <div key={item.id} className="images">
-//                     <h3>{item.brand}</h3>
-//                     <h3>${item.description}</h3>
-//                     <h3>${item.stock}</h3>
-//                     <img src={item.thumbnail} className="img"></img>
-//                     <h3>{item.discountPercentage}%</h3>
+const ProductDetails = ()=>{
+    const [productDetails, setProducts] = useState([]);
+    const [loading, setLoading] = useState([]);
+    useEffect(()=>{
+        (async()=>{
+            await getProductDetails();
+        })()
+    },[])
+    console.log({productDetails});
+    const getProductDetails = async () =>{
+        try{
+            setLoading(true)
+            const response = await fetch('https://dummyjson.com/products')
+            const result = await response.json();
+            setProducts(result.productDetails);
+            setLoading(false);
+        }
+        catch(error){
+            console.log(error.message);
+        }
+    }
+    if(loading){
+        return <h2>Loading...</h2>
+    }
+    return(
+        <div >
+            <Navigation></Navigation>
+            <div className="all">
+
+            {productDetails.map(item=>(
+                <div key={item.id} className="images">
+                    <img src={item.thumbnail} className="img"></img>
+                    <h3>{item.title}</h3>
+                    <h3>${item.price}</h3>
                     
-//                 </div>
+                    <h3>{item.discountPercentage}%</h3>
+                    <button className="login-button1">View Details</button>
+                    
+                </div>
                 
-//             ))}
+            ))}
+            </div>
             
-//         </div>
-//     )
-// }
-// export default ProductDetails;
-
-
-
-
+            <button type="submit" className="viewmore">More Details</button>
+        </div>
+    )
+}
+export default ProductDetails;

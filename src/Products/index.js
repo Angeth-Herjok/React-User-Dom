@@ -40,11 +40,13 @@ const Products = ()=>{
                     
                     <h3>{item.discountPercentage}%</h3>
                     <button className="login-button1">View Details</button>
+                    
                 </div>
                 
             ))}
             </div>
-            <button className="viewmore">More Details</button>
+            
+            <button type="submit" className="viewmore">More Details</button>
         </div>
     )
 }
