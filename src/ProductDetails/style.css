@@ -1,0 +1,21 @@
+.products {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .productheading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .productImage {
+    text-align: center;
+  }
+  
+  .images {
+    width: 300px;
+    height: 200px;
+  }

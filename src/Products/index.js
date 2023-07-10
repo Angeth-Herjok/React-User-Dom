@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navigation from "../Navigation";
 
 const Products = ()=>{
+   
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState([]);
     useEffect(()=>{
@@ -30,6 +31,7 @@ const Products = ()=>{
     return(
         <div >
             <Navigation></Navigation>
+            <h1 className="list">List of Products</h1>
             <div className="all">
 
             {products.map(item=>(
@@ -39,14 +41,14 @@ const Products = ()=>{
                     <h3>${item.price}</h3>
                     
                     <h3>{item.discountPercentage}%</h3>
-                    <button className="login-button1">View Details</button>
+                   <Link to="/ProductDetails/"><button type="submit" className="login-button1">View Details</button></Link>
                     
                 </div>
-                
+               
             ))}
             </div>
             
-            <button type="submit" className="viewmore">More Details</button>
+            
         </div>
     )
 }
